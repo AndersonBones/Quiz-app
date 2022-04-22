@@ -1,6 +1,7 @@
 var main_section = $(".main-section");
 var play_btn = $("#play-quiz");
 
+
 var ranking_section = document.querySelector('.ranking-section');
 var ranking_btn = $("#ranking-quiz");
 
