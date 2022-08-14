@@ -1,12 +1,10 @@
- // Your web app's Firebase configuration
- const firebaseConfig = {
-    apiKey: "AIzaSyDe5vp7JUoFNdeJGSDUxVhUTKhLggQ-dpE",
-    authDomain: "projeto2-aa873.firebaseapp.com",
-    databaseURL: "https://projeto2-aa873-default-rtdb.firebaseio.com",
-    projectId: "projeto2-aa873",
-    storageBucket: "projeto2-aa873.appspot.com",
-    messagingSenderId: "456917550085",
-    appId: "1:456917550085:web:7d92aebebda5877994886c"
+const firebaseConfig = {
+  apiKey: "AIzaSyCdYcWNsB_TtpnvsM4OPz5r-E1EWYCtraY",
+  authDomain: "quiz-53312.firebaseapp.com",
+  projectId: "quiz-53312",
+  storageBucket: "quiz-53312.appspot.com",
+  messagingSenderId: "641667213444",
+  appId: "1:641667213444:web:b9f26d594f363b335b3ad1"
 };
 
   // Initialize Firebase
@@ -27,6 +25,7 @@ function Creat_user(){
         db.collection('scores').doc(userId).set({score:SCORE, name:user_name.value}).then((docRef)=>{
           // data posted successfully
           SCORE = 0;
+          user_name = '';
         })
         .catch((error)=>{
           alert('Error posting user data')
