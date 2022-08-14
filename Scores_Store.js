@@ -25,7 +25,7 @@ function Creat_user(){
         db.collection('scores').doc(userId).set({score:SCORE, name:user_name.value}).then((docRef)=>{
           // data posted successfully
           SCORE = 0;
-          user_name = '';
+          user_name.value = '';
         })
         .catch((error)=>{
           alert('Error posting user data')
