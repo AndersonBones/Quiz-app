@@ -25,6 +25,7 @@ function Creat_user(){
         db.collection('scores').doc(userId).set({score:SCORE, name:user_name.value}).then((docRef)=>{
           // data posted successfully
           SCORE = 0;
+          Update_Score()
           user_name.value = '';
         })
         .catch((error)=>{
@@ -44,6 +45,7 @@ function Creat_user(){
             db.collection('scores').doc(userId).update({score:firebase.firestore.FieldValue.increment(SCORE)}).then((docRef)=>{
               // data posted successfully
               SCORE = 0;
+              Update_Score()
             })
             .catch((error)=>{
               // error
